@@ -3,7 +3,7 @@
 namespace Test;
 
 use PHPUnit\Framework\TestCase;
-use src\Calculation;
+use Src\Calculation;
 
 final class CalculationTest extends TestCase
 {

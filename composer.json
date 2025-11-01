@@ -7,7 +7,12 @@
     },
     "autoload": {
         "psr-4": {
-             "src\\": "src/"
+             "Src\\": "src/"
          }
-      }
+      },
+    "autoload-dev": {
+		"psr-4": {
+			"Test\\": "test"
+		}
+	}
 }
