@@ -21,3 +21,4 @@ jobs:
           version: 9.6
           php_version: 8.4
           bootstrap: vendor/autoload.php
+          configuration: test/phpunit.xml
