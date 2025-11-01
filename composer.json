@@ -1,4 +1,7 @@
 {
+    "name": "danilo-pitombeira/sonarqube-estudo",
+	"description": "Example project using php-actions/phpunit and sonarqube-scanner",
+
     "require-dev": {
         "phpunit/phpunit": "^12"
     },
