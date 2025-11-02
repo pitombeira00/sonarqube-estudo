@@ -1,1 +1,1 @@
-{"version":2,"defects":{"Test\\CalculationTest::testSomar":7},"times":{"Test\\CalculationTest::testSomar":0}}
+{"version":2,"defects":{"Test\\CalculationTest::testSomar":7},"times":{"Test\\CalculationTest::testSomar":0.001}}
