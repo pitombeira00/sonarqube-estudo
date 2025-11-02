@@ -25,3 +25,7 @@ jobs:
           configuration: test/phpunit.xml
           php_extensions: xdebug
           args: --coverage-clover=coverage.xml
+      - name: SonarQube Scan
+          uses: SonarSource/sonarqube-scan-action@v6
+          env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
