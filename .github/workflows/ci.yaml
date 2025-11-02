@@ -12,9 +12,7 @@ jobs:
 
       - name: Installing dependencies
         uses: php-actions/composer@v6 
-        with:
-          php_version: 8.4
-      
+        
       - name: Running unit test
         uses: php-actions/phpunit@v4
         with:
@@ -24,6 +22,7 @@ jobs:
           bootstrap: vendor/autoload.php
           configuration: test/phpunit.xml
           args: --coverage-clover=coverage.xml
+        
         - name: SonarQube Scan
           uses: SonarSource/sonarqube-scan-action@v6
           env:
