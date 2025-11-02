@@ -19,7 +19,7 @@ jobs:
         - name: Install dependencies with composer
           run: composer update --no-ansi --no-interaction --no-progress
         - name: Run tests with phpunit/phpunit
-          run: vendor/bin/phpunit --coverage-clover=coverage.xml
+          run: vendor/bin/phpunit -c test/phpunit.xml --coverage-clover=coverage.xml
         - name: SonarQube Scan
           uses: SonarSource/sonarqube-scan-action@v6
           env:
