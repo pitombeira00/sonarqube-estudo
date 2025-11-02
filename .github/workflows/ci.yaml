@@ -1,0 +1,31 @@
+name: CI
+
+on: pull_request
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Installing dependencies
+        uses: php-actions/composer@v6 
+        with:
+          php_version: 8.4
+          command: install
+      
+      - name: Running unit test
+        uses: php-actions/phpunit@v4
+        with:
+          version: 9.6
+          php_version: 8.4
+          bootstrap: vendor/autoload.php
+          configuration: test/phpunit.xml
+          php_extensions: xdebug
+          args: --coverage-clover=coverage.xml
+      - name: SonarQube Scan
+          uses: SonarSource/sonarqube-scan-action@v6
+          env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
